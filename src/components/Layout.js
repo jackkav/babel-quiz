@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/native'
 import { Button } from './Button'
-export const Layout = () => (
+export const Layout = ({ card }) => (
   <Root>
     <Left>
       <GreenText>对</GreenText>
