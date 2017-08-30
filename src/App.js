@@ -33,15 +33,25 @@ const randomChallenge = () => {
     test.plecoflash.cards.card[
       Math.ceil(Math.random() * test.plecoflash.cards.card.length - 1)
     ].entry
-
+  const rA = Math.ceil(Math.random() * 3)
+  const rB = Math.ceil(Math.random() * 3)
+  const arr = [headword(card), pinyin(card), definition(card)]
+  const correctAnswer = arr[rB - 1]
   return {
-    headword: headword(card),
-    pinyin: pinyin(card),
-    definition: definition(card),
-    one: 'dog',
-    two: 'fox',
-    three: '123',
+    headword: rB === 1 ? '???' : headword(card),
+    pinyin: rB === 2 ? '???' : pinyin(card),
+    definition: rB === 3 ? '???' : definition(card),
+    one: rA === 1 ? correctAnswer : 'dog',
+    two: rA === 2 ? correctAnswer : 'fox',
+    three: rA === 3 ? correctAnswer : '123',
   }
+}
+const whatAreWeTesting = () => {
+  //1-3
+  const rand = Math.ceil(Math.random() * 3)
+  if (rand === 1) return 'headword'
+  if (rand === 2) return 'pinyin'
+  if (rand === 3) return 'definition'
 }
 const headword = card => card.headword[0]['#text']
 const pinyin = card => card.pron['#text']
