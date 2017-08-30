@@ -1,21 +1,78 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components/native'
+import { Button } from './components/Button'
 
-class App extends Component {
+export class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+      <Root>
+        <Left>
+          <GreenText>对</GreenText>
+          <AnyText>对</AnyText>
+        </Left>
+
+        <Middle>
+          <Challenge>电</Challenge>
+          <Clue>dian</Clue>
+          <Clue>???</Clue>
+          <Button title="dog" />
+          <Button title="cat" />
+          <Button title="electricity" />
+        </Middle>
+
+        <Right>
+          <RedText>错</RedText>
+          <AnyText>错</AnyText>
+        </Right>
+      </Root>
+    )
   }
 }
 
-export default App;
+const Root = styled.View`
+  flex: 1;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  text-align: center;
+`
+const Left = styled.View`flex: 1;`
+const Middle = styled.View`
+  flex: 4;
+  justify-content: flex-start;
+`
+const Right = styled.View`flex: 1;`
+const AnyText = styled.Text`padding: 10px 10px 10px 10px;`
+const Challenge = styled.Text`
+  padding: 10px 10px 10px 10px;
+  font-size: 40;
+`
+const Clue = styled.Text`padding: 10px 10px 10px 10px;`
+const RedText = styled.Text`
+  padding: 10px 10px 10px 10px;
+  color: red;
+  font-size: 30;
+`
+const GreenText = styled.Text`
+  padding: 10px 10px 10px 10px;
+  color: green;
+  font-size: 30;
+`
+
+// // Styles
+// const styles = StyleSheet.create({
+//   card: {
+//     flexGrow: 1,
+//     justifyContent: 'center',
+//   },
+//   title: {
+//     fontSize: '1.25rem',
+//     fontWeight: 'bold',
+//   },
+//   image: {
+//     height: 40,
+//     marginVertical: 10,
+//     width: 40,
+//   },
+// })
+// export default App
