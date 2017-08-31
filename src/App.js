@@ -42,17 +42,14 @@ const randomChallenge = () => {
     pinyin: rB === 2 ? '???' : pinyin(card),
     definition: rB === 3 ? '???' : definition(card),
     one: rA === 1 ? correctAnswer : 'dog',
+    oneCorrect: rA === 1,
     two: rA === 2 ? correctAnswer : 'fox',
+    twoCorrect: rA === 2,
     three: rA === 3 ? correctAnswer : '123',
+    threeCorrect: rA === 3,
   }
 }
-const whatAreWeTesting = () => {
-  //1-3
-  const rand = Math.ceil(Math.random() * 3)
-  if (rand === 1) return 'headword'
-  if (rand === 2) return 'pinyin'
-  if (rand === 3) return 'definition'
-}
+
 const headword = card => card.headword[0]['#text']
 const pinyin = card => card.pron['#text']
 const definition = card => card.defn
