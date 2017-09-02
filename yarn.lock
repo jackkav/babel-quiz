@@ -2598,6 +2598,12 @@ find-cache-dir@^1.0.0:
     make-dir "^1.0.0"
     pkg-dir "^2.0.0"
 
+find-hanzi@^1.0.6, find-hanzi@^1.0.8:
+  version "1.0.9"
+  resolved "https://registry.npmjs.org/find-hanzi/-/find-hanzi-1.0.9.tgz#9e045f2f179f591dcffc66f2f55397b0d5f83f4a"
+  dependencies:
+    pinyin-utils "^1.0.3"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "https://registry.npmjs.org/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
@@ -2857,6 +2863,13 @@ handlebars@^4.0.3:
     source-map "^0.4.4"
   optionalDependencies:
     uglify-js "^2.6"
+
+hanzi-to-pinyin@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.npmjs.org/hanzi-to-pinyin/-/hanzi-to-pinyin-1.0.5.tgz#44df35b7816952f7caaf9f715a1805777b7d70c9"
+  dependencies:
+    find-hanzi "^1.0.8"
+    so "^1.0.1"
 
 har-schema@^1.0.5:
   version "1.0.5"
@@ -4644,6 +4657,33 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.npmjs.org/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pinyin-convert@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/pinyin-convert/-/pinyin-convert-1.0.6.tgz#554861ad4e0c787e4cc211ac4ec068ec1eb6261b"
+  dependencies:
+    hanzi-to-pinyin "^1.0.4"
+    pinyin-or-hanzi "^1.0.3"
+    pinyin-split "^1.0.5"
+    pinyin-utils "^1.0.3"
+
+pinyin-or-hanzi@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/pinyin-or-hanzi/-/pinyin-or-hanzi-1.0.4.tgz#4727f55add8ec3477ddb8a8152e2336681770ef1"
+  dependencies:
+    find-hanzi "^1.0.6"
+    pinyin-utils "^1.0.3"
+    so "^1.0.1"
+
+pinyin-split@^1.0.5:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/pinyin-split/-/pinyin-split-1.0.6.tgz#180e2b395ab00eb2c4a1a7a9c1b04f56ad9bd1df"
+  dependencies:
+    pinyin-utils "^1.0.3"
+
+pinyin-utils@^1.0.3:
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/pinyin-utils/-/pinyin-utils-1.0.4.tgz#3e4f5a3a18b7ad46e645bca478e2fb824d1b8e44"
+
 pkg-dir@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"
@@ -5703,6 +5743,10 @@ sntp@1.x.x:
   resolved "https://registry.npmjs.org/sntp/-/sntp-1.0.9.tgz#6541184cc90aeea6c6e7b35e2659082443c66198"
   dependencies:
     hoek "2.x.x"
+
+so@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/so/-/so-1.0.1.tgz#8a791a06c823c0908851bb6dc65b7583185badf1"
 
 sockjs-client@1.1.4:
   version "1.1.4"

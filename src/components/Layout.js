@@ -20,13 +20,15 @@ const Root = styled.View`
   flex: 1;
   flex-direction: row;
   background-color: black;
-  color: white;
-  text-align: center;
 `
 const Left = styled.View`flex: 1;`
 
 const Right = styled.View`flex: 1;`
-const AnyText = styled.Text`padding: 10px 10px 10px 10px;`
+const AnyText = styled.Text`
+  color: white;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+`
 
 const RedText = styled.Text`
   padding: 10px 10px 10px 10px;
